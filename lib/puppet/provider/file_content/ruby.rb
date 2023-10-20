@@ -23,7 +23,7 @@ Puppet::Type.type(:file_content).provide(:ruby) do
   end
 
   def target_content
-    @target_content ||= (File.exists?(resource[:path]) ? File.read(resource[:path]) : '')
+    @target_content ||= (File.exist?(resource[:path]) ? File.read(resource[:path]) : '')
   end
 
 end
